@@ -29,7 +29,17 @@ public class MainActivity extends AppCompatActivity {
             x=Math.round(Math.toDegrees(sensorEvent.values[0]));
             y=Math.round(Math.toDegrees(sensorEvent.values[1]));
             z=Math.round(Math.toDegrees(sensorEvent.values[2]));
-            tvDirection.setText(x+":"+y+":"+z);
+            if(y>10){
+                tvDirection.setText("Adelante");
+            }else if(y<-10){
+                tvDirection.setText("Atras");
+            } else if (x>10) {
+                tvDirection.setText("Derecha");
+            }else if (x<-10){
+                tvDirection.setText("Izquierda");
+            }else{
+                tvDirection.setText("Alto");
+            }
             }
 
             @Override
