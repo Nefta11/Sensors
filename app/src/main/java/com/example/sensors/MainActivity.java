@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         sensorManager.registerListener(gyroscopeEventListener, gyroscopeSensor, SensorManager.SENSOR_DELAY_NORMAL);
-
+ //TAREA DEJO
 
     }
 }
